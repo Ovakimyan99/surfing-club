@@ -1,3 +1,7 @@
+.slide-wrapper{
+    position: relative;
+}
+
 .slide-item{
     display: flex;
     justify-content: flex-end;
@@ -57,8 +61,37 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: -16px 25px 65px rgba(11, 12, 17, 0.2);
 }
 
 .slide-item__img--bg-1{
     background-image: url(../../img/img/img-header.jpg);
+}
+
+/* -- slide-controls -- */
+
+.slide-controls{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+}
+
+.slide-controls-number{
+    margin: 0 18px;
+    font-family: 'League-Spartan', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 4px;
+    color: #ebebeb;
+}
+
+.slide-controls-number__active{
+    color: #5da8ef;
+}
+
+.slide-controls-number__total{
+color: #262626;
 }
