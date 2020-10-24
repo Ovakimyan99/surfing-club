@@ -41,7 +41,7 @@ a.read-more-link {
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-decoration: none;
+  text-decoration: none !important;
   position: relative;
   padding-bottom: 10px;
 }
@@ -185,6 +185,9 @@ a.read-more-link::after {
   letter-spacing: 5px;
   font-family: 'League-Spartan', sans-serif;
   font-weight: 700;
+}
+.header__list-link:hover {
+  text-decoration: none;
 }
 @font-face {
   font-family: 'League-Spartan';
