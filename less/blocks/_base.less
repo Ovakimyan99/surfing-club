@@ -121,3 +121,46 @@ img {
     top: 0;
     transform-origin: left top;
 }
+
+
+// modal
+
+.modalWrapper{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(11, 12, 17, 0.2);
+}
+
+.modal-block{
+    display: block;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: -16px 25px 65px rgba(11, 12, 17, 0.2);
+    max-width: 96%;
+    overflow: hidden;
+}
+
+.modal-block iframe{
+    max-width: 100%;
+}
+
+.modal-close{
+    display: block;
+    text-align: right;
+    padding: 5px 25px;
+    border: 1px solid #5191ce;
+    margin-left: auto;
+    background: #5da8ef;
+    color: #eaeae2;
+    border-radius: 3px;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-left: auto;
+}
