@@ -1,19 +1,23 @@
 .site-descr{
-    position: absolute;
-    right: -30px;
-    top: 58px;
-    z-index: 10;
+    width: auto;
+    display: block;
+    position: relative;
 
-    @media (max-width: 1400px) {
+    @media (min-width: 1254px) {
         right: 30px;
         top: 170px;
-        .site-descr__content{
-            color: #fff;
-        }
+        position: absolute;
+        z-index: 10;
+    }
+
+    @media (min-width: 1400px) {
+        right: -30px;
+        top: 58px;
     }
 }
 
 .site-descr__content{
+
     color: rgba(11, 12, 17, 0.2);
     font-family: 'League-Spartan', sans-serif;
     font-size: 9px;
@@ -21,9 +25,22 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 5px;
-    transform: rotate(-90deg) translate(-100%, 0);
-    transform-origin: left top;
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: 1254px) {
+        color: #fff;
+        transform: rotate(-90deg) translate(-100%, 0);
+        transform-origin: left top;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    @media (min-width: 1400px) {
+        color: rgba(11, 12, 17, 0.2);
+    }
+}
+
+@media (min-width: 1254px) {
+    
 }

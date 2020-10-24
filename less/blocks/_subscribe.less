@@ -21,13 +21,20 @@
 }
 
 .subscribe{
-    width: 590px;
+    max-width: 590px;
     margin-top: 50px;
-    padding-top: 160px;
-    padding-bottom: 75px;
+    padding-top: 160px/2;
+    padding-bottom: 75px/2;
+    padding-left: 15px;
+    padding-right: 15px;
     position: relative;
     margin: 0 auto;
     text-align: center;
+
+    
+   @media (min-width: 1254px) {
+       padding: 160px 0 75px 0;
+   }
 
     &:before{
         content: '';
@@ -37,14 +44,17 @@
         transform: translateX(-50%);
         display: block;
         width: 2px;
-        height: 100px;
+        height: 100px/2;
         background-color: #5da8ef;
+
+        @media (min-width: 1254px) {
+            height: 100px;
+        }
     }
 }
 
 .subscribe-form{
     display: flex;
-    
 }
 
 .subscribe__input{
@@ -73,6 +83,7 @@
 
 .subscribe__submit{
     width: 50px;
+    flex: 0 0 50px;
     height: 50px;
     background-color: #5da8ef;
     background-image: url('../img/controls/subscribe-arrow.svg');
