@@ -344,9 +344,6 @@ a.read-more-link::after {
     height: 572px;
   }
 }
-.slide-item__img--bg-1 {
-  background-image: url(../img/img/img-header.jpg);
-}
 /* -- slide-controls -- */
 .slide-controls {
   display: flex;
