@@ -9,19 +9,19 @@ $(document).ready(function() {
             headingSpan: 'Yuor',
             heading: 'Beautiful Escape',
             descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: 'background-image: url(../img/img/img-header.jpg)',
+            background: 'background-image: url(./img/img/img-header.jpg)',
         },
         {
             headingSpan: 'Yuor',
             heading: 'Beautiful Escape',
             descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: 'background-image: url(../img/img/img-header.jpg)',
+            background: 'background-image: url(./img/img/img-header.jpg)',
         },
         {
             headingSpan: 'Yuor',
             heading: 'Beautiful Escape',
             descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: 'background-image: url(../img/img/img-header.jpg)',
+            background: 'background-image: url(./img/img/img-header.jpg)',
         }
     ];
 
