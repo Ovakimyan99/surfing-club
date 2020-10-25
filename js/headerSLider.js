@@ -70,7 +70,8 @@ $(document).ready(function() {
         items:1,
         margin: 200,
         dots: false,
-        smartSpeed: 1300
+        smartSpeed: 1300,
+        autoHeight: true
     });
  
 

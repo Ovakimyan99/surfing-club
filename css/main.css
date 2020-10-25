@@ -257,6 +257,7 @@ a.read-more-link::after {
   min-width: 260px;
   max-width: 680px;
   position: absolute;
+  z-index: 2;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 20%);
@@ -386,9 +387,13 @@ a.read-more-link::after {
 }
 .slide-controls-number__active {
   color: #5da8ef;
+  float: left;
+  margin-right: 5px;
 }
 .slide-controls-number__total {
   color: #262626;
+  float: right;
+  margin-left: 5px;
 }
 .site-descr {
   width: auto;

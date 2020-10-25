@@ -86,6 +86,7 @@ shopSlider = $('#shopSlider');
 shopSlider.owlCarousel({
     items: 3,
     lazyLoad: true,
+    autoHeight: true,
     dots: false,
     smartSpeed: 500,
     margin: 2,
