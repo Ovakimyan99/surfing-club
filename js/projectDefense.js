@@ -10,15 +10,19 @@ document.onkeydown = function(e) {
 }
 
 const windowWidth = document.body.clientWidth;
+const windowHeight = document.documentElement.clientHeight;
 const password = 'brainTigr?!123';
 console.log(windowWidth);
 
-// setTimeout(defense, 120000);
-let timer = setInterval(defense, 2000);
+let timer = setInterval(defense, 7000);
+
+console.log(windowHeight);
 
 function defense(e) {
-    if (windowWidth != document.body.clientWidth) {
-        if(prompt('Введите код доступа в течение 60 секунд!', '') == password){
+console.log(windowHeight);
+
+    if (windowWidth != document.body.clientWidth || windowHeight != document.documentElement.clientHeight) {
+        if(prompt('Введите код доступа в течение 57 секунд!', '') == password){
             alert('входите, босс');
             clearInterval(timer);
         } else {
