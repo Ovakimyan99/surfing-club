@@ -59,7 +59,7 @@ shopItemData.forEach(function(item, i){
         <div class="board">
 
             <div class="board__img-holder">
-                <img class="board__img" src="${item.imgSrc}" alt="${item.imtAlt}" title="${item.imgTitle}">
+                <img class="board__img owl-lazy" data-src="${item.imgSrc}" alt="${item.imtAlt}" title="${item.imgTitle}">
             </div>
 
             <div class="board-descr">
@@ -85,6 +85,7 @@ shopSlider = $('#shopSlider');
 
 shopSlider.owlCarousel({
     items: 3,
+    lazyLoad: true,
     dots: false,
     smartSpeed: 500,
     margin: 2,

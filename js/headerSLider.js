@@ -9,19 +9,19 @@ $(document).ready(function() {
             headingSpan: 'Yuor',
             heading: 'Beautiful Escape',
             descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: 'background-image: url(./img/img/img-header.jpg)',
+            background: './img/img/img-header.jpg',
         },
         {
             headingSpan: 'Yuor',
             heading: 'Beautiful Escape',
             descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: 'background-image: url(./img/img/img-header.jpg)',
+            background: './img/img/img-header.jpg',
         },
         {
             headingSpan: 'Yuor',
             heading: 'Beautiful Escape',
             descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: 'background-image: url(./img/img/img-header.jpg)',
+            background: './img/img/img-header.jpg',
         }
     ];
 
@@ -34,14 +34,14 @@ $(document).ready(function() {
                 <div class="slide-item__descr">
                     <h2 class="slide-item__heading">
                         <span>${item.headingSpan}</span>
-                        ${item.headingSpan}
+                        ${item.heading}
                     </h2>
                     <div class="slide-item__text">
                         <p>${item.descr}</p>
                     </div>
                 </div>
-                <div class="slide-item__img" style='${item.background}'>
-
+                <div class="slide-item__img">
+                    <img class='owl-lazy' data-src='${item.background}' alt='${item.heading} title='${item.heading}'>
                 </div>
             </div>
             <!-- / slide ${i + 1} -->
@@ -65,6 +65,7 @@ $(document).ready(function() {
 
 
     headerSlider.owlCarousel({
+        lazyLoad:true,
         center: true,
         items:1,
         margin: 200,
