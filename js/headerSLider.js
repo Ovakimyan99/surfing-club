@@ -1,56 +1,50 @@
-$(document).ready(function() {
+// header slider
 
-    // header slider
+// data slide
 
-    // data slide
+const getDataHeaderSlider = async function(url) {
 
-    const headerSlideData = [
-        {
-            headingSpan: 'Yuor',
-            heading: 'Beautiful Escape',
-            descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: './img/img/img-header.jpg',
-        },
-        {
-            headingSpan: 'Yuor',
-            heading: 'Beautiful Escape',
-            descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: './img/img/img-header.jpg',
-        },
-        {
-            headingSpan: 'Yuor',
-            heading: 'Beautiful Escape',
-            descr: 'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave.',
-            background: './img/img/img-header.jpg',
-        }
-    ];
-
-    let headerSlider = document.querySelector('#headerSlider');
+    const response = await fetch(url);
     
-    headerSlideData.forEach(function(item, i){
+    if (!response.ok) {
+        throw new Error (`Ошибка по адресу ${url},
+        статус ошибки ${response.status}`);
+    }
+    
+    return await response.json();
+};
+
+const headerSlider = document.querySelector('#headerSlider');
+
+function createHeaderSliderItem (slideItem) {
+
+    
+    const { headingSpan, heading, descr, background } = slideItem;
+
         headerSlider.insertAdjacentHTML('beforeend', `
-        <!-- slide ${i + 1} -->
+        <!-- slide ${heading} -->
             <div class="container slide-item">
                 <div class="slide-item__descr">
                     <h2 class="slide-item__heading">
-                        <span>${item.headingSpan}</span>
-                        ${item.heading}
+                        <span>${headingSpan}</span>
+                        ${heading}
                     </h2>
                     <div class="slide-item__text">
-                        <p>${item.descr}</p>
+                        <p>${descr}</p>
                     </div>
                 </div>
                 <div class="slide-item__img">
-                    <img class='owl-lazy' data-src='${item.background}' alt='${item.heading} title='${item.heading}'>
+                    <img class='owl-lazy' data-src='${background}' alt='${heading} title='${heading}'>
                 </div>
             </div>
-            <!-- / slide ${i + 1} -->
-        `);
-    });
-    
-    
-    headerSlider = $('#headerSlider');
-    
+        <!-- / slide ${heading} -->
+    `);
+}
+
+getDataHeaderSlider('./db/headerSlider.json').then( function(data){
+    data.forEach(createHeaderSliderItem);
+    const headerSlider = $('#headerSlider');
+
     headerSlider.on('changed.owl.carousel', function(e){
         $('.slide-controls-number__active').text(e.item.index + 1);
 
@@ -73,7 +67,7 @@ $(document).ready(function() {
         smartSpeed: 1300,
         autoHeight: true
     });
- 
+    
 
     // Go to the next item
     $('#headerSliderRight').click(function() {
@@ -84,5 +78,4 @@ $(document).ready(function() {
     $('#headerSliderLeft').click(function() {
         headerSlider.trigger('prev.owl.carousel', [1300]);
     });
-
 });

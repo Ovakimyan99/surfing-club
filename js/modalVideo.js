@@ -1,33 +1,21 @@
 // modal window -- video
 
-const modalWrapperVideo = document.querySelector('.modalWrapper');
-const modal = document.querySelector('.modal-block');
-const videoControl = document.querySelector('.club-description-video__control');
+const modalVideoWrapper = document.querySelector('#modal-video-wrapper');
+const viedoControl = document.querySelector('.club-description-video__control');
+const videoModalClose = document.querySelectorAll('[data-video-modal-close]');
+const body = document.body;
 
-videoControl.addEventListener('click', function() {
-    const scrollTop = window.pageYOffset;
-    modalWrapperVideo.style.top = scrollTop + 'px';
-    modalWrapperVideo.style.display = 'flex';
+viedoControl.addEventListener('click', ()=>{
+    modalVideoWrapper.style.display = 'flex';
+    body.style.overflow = 'hidden';
+});
 
-    document.body.style.overflow = 'hidden';
-    
-    modal.insertAdjacentHTML('afterbegin', `
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cYjy5BNQWbA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <input class="modal-close" type="button" value='CLOSE'>
-    `);
 
-    const modalClose = document.querySelector('.modal-close');
-    modalClose.addEventListener('click', modalCloseClick);
-
-    modalWrapperVideo.addEventListener('click', (e)=>{
-        if (e.target.hasAttribute('data-modalClose')){
-            modalCloseClick();
+videoModalClose.forEach((item)=>{
+    item.addEventListener('click', (e)=>{
+        if(e.target.hasAttribute('data-video-modal-close')){
+            body.style.overflow = '';
+            modalVideoWrapper.style.display = 'none';
         }
     });
-    
-    function modalCloseClick(){
-        modalWrapperVideo.style.display = 'none';
-        modal.textContent ='';
-        document.body.style.overflow = '';
-    }
 });
