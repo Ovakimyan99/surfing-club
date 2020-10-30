@@ -1,13 +1,13 @@
 // modal window -- video
 
-const modalWrapper = document.querySelector('.modalWrapper');
+const modalWrapperVideo = document.querySelector('.modalWrapper');
 const modal = document.querySelector('.modal-block');
 const videoControl = document.querySelector('.club-description-video__control');
 
 videoControl.addEventListener('click', function() {
     const scrollTop = window.pageYOffset;
-    modalWrapper.style.top = scrollTop + 'px';
-    modalWrapper.style.display = 'flex';
+    modalWrapperVideo.style.top = scrollTop + 'px';
+    modalWrapperVideo.style.display = 'flex';
 
     document.body.style.overflow = 'hidden';
     
@@ -19,14 +19,14 @@ videoControl.addEventListener('click', function() {
     const modalClose = document.querySelector('.modal-close');
     modalClose.addEventListener('click', modalCloseClick);
 
-    modalWrapper.addEventListener('click', (e)=>{
+    modalWrapperVideo.addEventListener('click', (e)=>{
         if (e.target.hasAttribute('data-modalClose')){
             modalCloseClick();
         }
     });
     
     function modalCloseClick(){
-        modalWrapper.style.display = 'none';
+        modalWrapperVideo.style.display = 'none';
         modal.textContent ='';
         document.body.style.overflow = '';
     }

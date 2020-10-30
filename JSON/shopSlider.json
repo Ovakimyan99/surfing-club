@@ -1,0 +1,50 @@
+[
+    {
+        "imgSrc":"./img/boards/board-1.png",
+        "imtAlt":"Surfing boards",
+        "imgTitle":"Surfing boards",
+        "boardCat":"Funboards",
+        "boardTitle":"Chilli Rare Bird",
+        "boardPrice":"$890"
+    },
+    {
+        "imgSrc":"./img/boards/board-3.png",
+        "imtAlt":"Surfing boards",
+        "imgTitle":"Surfing boards",
+        "boardCat":"SURFBOARDS",
+        "boardTitle":"Emery NEM XF",
+        "boardPrice":"$950"
+    },
+    {
+        "imgSrc":"./img/boards/board-2.png",
+        "imtAlt":"Surfing boards",
+        "imgTitle":"Surfing boards",
+        "boardCat":"Funboards",
+        "boardTitle":"Agency GROM",
+        "boardPrice":"$670"
+    },
+    {
+        "imgSrc":"./img/boards/board-1.png",
+        "imtAlt":"Surfing boards",
+        "imgTitle":"Surfing boards",
+        "boardCat":"Funboards",
+        "boardTitle":"Chilli Rare Bird",
+        "boardPrice":"$890"
+    },
+    {
+        "imgSrc":"./img/boards/board-3.png",
+        "imtAlt":"Surfing boards",
+        "imgTitle":"Surfing boards",
+        "boardCat":"SURFBOARDS",
+        "boardTitle":"Emery NEM XF",
+        "boardPrice":"$950"
+    },
+    {
+        "imgSrc":"./img/boards/board-2.png",
+        "imtAlt":"Surfing boards",
+        "imgTitle":"Surfing boards",
+        "boardCat":"Funboards",
+        "boardTitle":"Agency GROM",
+        "boardPrice":"$670"
+    }
+]
