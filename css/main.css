@@ -759,7 +759,7 @@ a.read-more-link::after {
     margin-left: 115px;
   }
 }
-.modalWrapper {
+.modalWrapperVideo {
   display: none;
   justify-content: center;
   align-items: center;
@@ -771,7 +771,7 @@ a.read-more-link::after {
   width: 100%;
   background-color: rgba(11, 12, 17, 0.2);
 }
-.modal-block {
+.modal-block-video {
   display: block;
   border-radius: 15px;
   padding: 10px;
@@ -780,10 +780,10 @@ a.read-more-link::after {
   max-width: 96%;
   overflow: hidden;
 }
-.modal-block iframe {
+.modal-block-video iframe {
   max-width: 100%;
 }
-.modal-close {
+.modal-close-video {
   display: block;
   text-align: right;
   padding: 5px 25px;
