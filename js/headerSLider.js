@@ -41,6 +41,8 @@ function createHeaderSliderItem (slideItem) {
     `);
 }
 
+
+
 getDataHeaderSlider('./db/headerSlider.json').then( function(data){
     data.forEach(createHeaderSliderItem);
     const headerSlider = $('#headerSlider');
