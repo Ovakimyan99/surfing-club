@@ -50,7 +50,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 20px;
-
+    overflow: hidden;
 
     &::after{
         content: '';
@@ -85,6 +85,72 @@
 .auth-login__login{
     &::after{
         border: 7px solid #5da8ef;
+    }
+}
+
+.swipe-login-form{
+    position: absolute;
+    width: 100%;
+    height: ~"calc(100% + 1px)";;
+    z-index: 6;
+    background: #fff;
+    padding: 5px 10px;
+    border: 7px solid #5da8ef;
+    display: flex;
+    align-items: center;
+    bottom: 100%;
+    // bottom: 0; 
+    transition: 0.3s bottom;
+
+    .after-registration-thanks{
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+}
+
+.swipe-arr{
+    // #3498DB - синий
+    // #E67E22 - оранжевый
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 35px;
+    height: 55px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px -3px rgba(0, 0, 0, 0.726);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+.swipe-arr__login{
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.swipe-arr__auth{
+    width: 100%;
+}
+
+.login-forgot-password{
+    display: inline-block;
+    color: #2f4b58;
+    margin: 10px 0 20px;
+    transition: 0.3s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #007bff59;
+
+    &:hover{
+        text-decoration: none;
+        color: rgb(90, 117, 167);
+        border-bottom: 2px solid #007bffc0;
+    
     }
 }
 

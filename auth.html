@@ -6,6 +6,11 @@
     <title>Surfing Club | Тигран Овакимян</title>
     <link rel="stylesheet" href="./css/auth-login.css">
     <link rel="stylesheet" href="./libs/bootstrap-reboot/bootstrap-reboot.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display:wght@400;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,7 +30,40 @@
 <div class="container auth-login-wrapper auth-wrapper">
 
     <div class="auth-login auth-login__auth">
-        <form action="POST" class="auth-login-form">
+    
+        <div class="swipe-login-form auth-login__login animate__animated">
+
+            <div class="auth-login-form swipe-auth-login">
+                <h2 class="auth-login-title">CREATE ACCOUNT</h1>
+
+                <span class="after-registration-thanks">If you are not registered yet, please go through the registration form</span>
+
+                <a href="./login.html" class="login-forgot-password">Log In</a>
+            </div>
+
+            <div class="swipe-arr">
+                <svg class="swipe-arr__login" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="26" height="26"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498DB"><path d="M152.15385,46.46274l-13.33413,-20.00121l-52.81971,36.51382l-52.81971,-36.51382l-13.33413,20.00121l66.15385,46.28185zM152.15385,99.48919l-13.33413,-20.23378l-52.81971,36.51382l-52.81971,-36.51382l-13.33413,20.23378l66.15385,46.04928z"></path>
+                        </g>
+                    </g>
+                </svg>
+                <svg class="swipe-arr__auth" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="26" height="26"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e67e22"><path d="M152.15385,46.46274l-13.33413,-20.00121l-52.81971,36.51382l-52.81971,-36.51382l-13.33413,20.00121l66.15385,46.28185zM152.15385,99.48919l-13.33413,-20.23378l-52.81971,36.51382l-52.81971,-36.51382l-13.33413,20.23378l66.15385,46.04928z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+        </div> 
+   
+
+        <form action="GET" class="auth-login-form">
             <h1 class="auth-login-title">LOG UP IN ACCOUNT</h1>
 
             <!-- email adres -->
@@ -46,9 +84,11 @@
 
             <button class="auth-login-button auth-button">Log up</button>
         </form>
+
     </div>
 
 </div>
     
+    <script src="./js/auth-modal.js"></script>
 </body>
 </html>
