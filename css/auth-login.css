@@ -138,14 +138,14 @@ a.read-more-link::after {
     width: auto;
   }
 }
-.nav-logo-wrapper-login {
+.nav-logo-wrapper-center {
   text-align: center;
   width: 100%;
   padding: 30px 0;
   margin: 0 auto;
 }
 @media (min-width: 1254px) {
-  .nav-logo-wrapper-login {
+  .nav-logo-wrapper-center {
     padding: 0;
     width: auto;
   }
@@ -221,8 +221,7 @@ a.read-more-link::after {
   cursor: pointer;
 }
 /* - header - */
-.login-wrapper {
-  background-image: url(../img/img/beach-login.jpg);
+.auth-login-wrapper {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -233,17 +232,28 @@ a.read-more-link::after {
   justify-content: center;
   align-items: center;
 }
-.login-wrapper:before {
+.auth-login-wrapper:before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(360deg, #020024 0%, #090979 0%, #ffffff 100%);
   opacity: 0.4;
 }
-.login {
+.login-wrapper {
+  background-image: url(../img/img/beach-login.jpg);
+}
+.login-wrapper:before {
+  background: linear-gradient(360deg, #020024 0%, #090979 0%, #ffffff 100%);
+}
+.auth-wrapper {
+  background-image: url(../img/img/surfboard-auth.jpg);
+}
+.auth-wrapper:before {
+  background: linear-gradient(360deg, #020024 0%, #e4a15d 0%, #ffffff 100%);
+}
+.auth-login {
   position: relative;
   width: 480px;
   padding: 20px 5px;
@@ -252,18 +262,17 @@ a.read-more-link::after {
   justify-content: center;
   align-items: center;
 }
-.login::after {
+.auth-login::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 7px solid #5da8ef;
   padding: 10px;
   background-color: #fff;
   z-index: 1;
   top: 0;
 }
-.login::before {
+.auth-login::before {
   content: '';
   position: absolute;
   height: calc(100% + 16px);
@@ -274,23 +283,30 @@ a.read-more-link::after {
   background-color: rgba(128, 128, 128, 0.12);
   z-index: 2;
 }
-.login-form {
+.auth-login__auth::after {
+  border: 7px solid #f89129;
+}
+.auth-login__login::after {
+  border: 7px solid #5da8ef;
+}
+.auth-login-form {
   position: relative;
   z-index: 4;
   text-align: center;
 }
-.login-title {
+.auth-login-title {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
-.login-group-input {
+.auth-login-group-input {
   width: 85%;
   padding: 0 10px;
   margin: 15px auto 18px;
   position: relative;
 }
-.login-input {
+.auth-login-input {
   width: 100%;
   padding-bottom: 5px;
   border: none;
@@ -301,21 +317,29 @@ a.read-more-link::after {
   padding-right: 10px;
   /* в фокусе работаем с lable */
 }
-.login-input:focus {
+.auth-login-input:focus {
   border-bottom: 1px solid #1d85c2;
 }
-.login-input:focus ~ .login-lable,
-.login-input:not(:placeholder-shown) ~ .login-lable {
+.auth-login-input:focus ~ .auth-login-lable,
+.auth-login-input:not(:placeholder-shown) ~ .auth-login-lable {
   top: -12px;
   font-size: 12px;
   color: #d0d8e2;
   line-height: 1;
 }
+.auth-login-input:not(:placeholder-shown) {
+  border-bottom: 1px solid #1d85c2;
+  background-color: #e8f0fe;
+}
 .login-input:not(:placeholder-shown) {
   border-bottom: 1px solid #1d85c2;
   background-color: #e8f0fe;
 }
-.login-lable {
+.auth-input:not(:placeholder-shown) {
+  border-bottom: 1px solid #b98856;
+  background-color: #f8c48f;
+}
+.auth-login-lable {
   position: absolute;
   top: 0;
   left: 12px;
@@ -323,17 +347,35 @@ a.read-more-link::after {
   z-index: 0;
   transition: 0.3s;
 }
-.login-button {
+.auth-forgot-password {
+  display: block;
+  color: #382b22;
+  margin: 10px 0 20px;
+  transition: 0.3s;
+}
+.auth-forgot-password:hover {
+  text-decoration: none;
+  color: #a77a5a;
+}
+.auth-login-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   color: #fff;
-  background-color: #5684d8;
   cursor: pointer;
   transition: 0.3s;
   letter-spacing: 1px;
 }
-.login-button:focus,
-.login-button:hover {
+.auth-login-button:focus,
+.auth-login-button:hover {
   background-attachment: rgba(0, 113, 240, 0.7);
+}
+.auth-button {
+  background-color: #f09439;
+}
+.login-button {
+  background-color: #5684d8;
+}
+.none {
+  display: none;
 }

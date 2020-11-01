@@ -263,14 +263,14 @@ a.read-more-link::after {
     width: auto;
   }
 }
-.nav-logo-wrapper-login {
+.nav-logo-wrapper-center {
   text-align: center;
   width: 100%;
   padding: 30px 0;
   margin: 0 auto;
 }
 @media (min-width: 1254px) {
-  .nav-logo-wrapper-login {
+  .nav-logo-wrapper-center {
     padding: 0;
     width: auto;
   }
