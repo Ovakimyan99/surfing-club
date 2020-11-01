@@ -13,8 +13,7 @@ const modalWrapperBasket = document.querySelector('.modal-wrapper');
 
 basket.addEventListener('click', ()=>{
     modalWrapperBasket.style.display = 'flex';
-    window.scrollTo(0, 0);
-    document.body.style.overflow = 'hidden'; 
+    enablesScroll(); 
 });
 
 const modalClose = document.querySelectorAll('[data-modalClose]');
@@ -25,8 +24,7 @@ modalClose.forEach((item)=>{
         e.target.closest('[data-modalClose]').classList != 'modal-wrapper')
         {
             modalWrapperBasket.style.display = 'none';
-            window.scrollTo(0, 0);
-            document.body.style.overflow = '';
+            disableScroll();
         }
     });
 });
