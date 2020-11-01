@@ -14,5 +14,6 @@ window.disableScroll = function() {
 
 window.enablesScroll = function() {
     const body =  document.body;
+    body.style.cssText ='';
     window.scroll({top: document.body.dbscrollY});
 }

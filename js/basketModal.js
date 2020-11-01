@@ -13,7 +13,7 @@ const modalWrapperBasket = document.querySelector('.modal-wrapper');
 
 basket.addEventListener('click', ()=>{
     modalWrapperBasket.style.display = 'flex';
-    enablesScroll(); 
+    disableScroll();
 });
 
 const modalClose = document.querySelectorAll('[data-modalClose]');
@@ -24,7 +24,7 @@ modalClose.forEach((item)=>{
         e.target.closest('[data-modalClose]').classList != 'modal-wrapper')
         {
             modalWrapperBasket.style.display = 'none';
-            disableScroll();
+            enablesScroll(); 
         }
     });
 });
